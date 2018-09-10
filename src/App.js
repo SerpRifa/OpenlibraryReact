@@ -62,6 +62,7 @@ class App extends Component {
     const { search } = this.props;
     this.searchApi(search);
     this.searchByTag('');
+    document.title = "openlibrary.org";
   }
 
   changeLang = () => {
