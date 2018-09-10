@@ -18,7 +18,7 @@ function* fetchBooksAsync(action) {
     try {
       yield put(requestBooks());
       const data = yield call(() => {        
-        return fetch("http://openlibrary.org/search.json?q="+action.payload)
+        return fetch("https://openlibrary.org/search.json?q="+action.payload)
             .then(res => res.json())
         }
       );
